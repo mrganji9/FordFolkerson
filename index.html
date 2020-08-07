@@ -133,7 +133,7 @@
               <div class="card border-primary mb-3">
                 <div class="card-header">
                   <strong style="font-family: 'IRANSansMobile'" class="text-primary">
-                    Load/Save Graph
+                    ذخیره یا بارگذاری گراف
                     &nbsp;&nbsp;
                     <em class="fa fa-toggle-on toggle-button"  id="load-save-on"  OnClick="toggleMenu('load-save', 'on')" style="display: none;"></em>
                     <em class="fa fa-toggle-off toggle-button" id="load-save-off" OnClick="toggleMenu('load-save', 'off')"></em>
@@ -141,13 +141,13 @@
                 </div>
                 <div class="card-body" id="load-save" style="display: none">
                   <input type="file" id="load-file" OnChange="readTextFile(this)" style="display: none">
-                  <small>Graph Name:</small>
+                  <small style="font-family: 'IRANSansMobile'" >نام گراف :</small>
                   <input type="text" value="myGraph" id="graph-name" class="form-control">
 
                   <br>
 
-                  <button class="btn btn-sm btn-info" OnClick="ng.saveGraph()">Save Graph</button>
-                  <button class="btn btn-sm btn-primary" OnClick="document.getElementById('load-file').click();">Load Graph</button>
+                  <button style="font-family: 'IRANSansMobile'"  class="btn btn-sm btn-info" OnClick="ng.saveGraph()">ذخیره گراف</button>
+                  <button style="font-family: 'IRANSansMobile'"  class="btn btn-sm btn-primary" OnClick="document.getElementById('load-file').click();">بارگذاری گراف</button>
                 </div>
               </div>
 
@@ -157,10 +157,10 @@
                   <div class="modal-content">
                     <div class="modal-header bg-primary"></div>
                     <div class="modal-body">
-                      <h2 class="text-primary">Graph loaded!</h2>
+                      <h2 style="font-family: 'IRANSansMobile'"  class="text-primary">گراف با موفقیت لود شد!</h2>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button style="font-family: 'IRANSansMobile'"  type="button" class="btn btn-danger" data-dismiss="modal">بستن</button>
                     </div>
                   </div>
                 </div>
@@ -168,8 +168,8 @@
 
               <div class="card border-primary mb-3">
                 <div class="card-header">
-                  <strong class="text-primary">
-                    Settings
+                  <strong style="font-family: 'IRANSansMobile'"  class="text-primary">
+                    تنظیمات
                     &nbsp;&nbsp;
                     <em class="fa fa-toggle-on toggle-button"  id="settings-on"  OnClick="toggleMenu('settings', 'on')" style="display: none;"></em>
                     <em class="fa fa-toggle-off toggle-button" id="settings-off" OnClick="toggleMenu('settings', 'off')"></em>
@@ -177,46 +177,46 @@
                 </div>
                 <div class="card-body" id="settings" style="display: none">
                   <select id="graphs" OnChange="ng.changeGraph(this.value)" class="form-control">
-                    <option value="--">--</option>
-                    <option value="0" selected="selected">Graph 1</option>
-                    <option value="1">Graph 2</option>
+                    <option style="font-family: 'IRANSansMobile'"  value="--">--</option>
+                    <option style="font-family: 'IRANSansMobile'"  value="0" selected="selected">گراف مثال ۱</option>
+                    <option style="font-family: 'IRANSansMobile'"  value="1">گراف مثال ۲</option>
                     <!-- <option value="2">Graph 3</option> -->
                   </select>
 
                   <br>
-                  <button class="btn btn-sm btn-success" OnClick="ng.newGraph()"><em class="fa fa-plus"></em> New Graph</button>
+                  <button style="font-family: 'IRANSansMobile'" class="btn btn-sm btn-success" OnClick="ng.newGraph()"><em class="fa fa-plus"></em>گراف جدید</button>
 
-                  <button class="btn btn-success btn-sm" OnClick="ng.togglePhysics()">
-                    <em class="fa fa-check" id="p_on" style="font-size: 15px"></em>
+                  <button style="font-family: 'IRANSansMobile'" class="btn btn-success btn-sm" OnClick="ng.togglePhysics()">
                     <em class="fa fa-times" id="p_off" style="display: none; font-size: 15px"></em>
-                    Physics
+                    <em class="fa fa-check" id="p_on" style="font-size: 15px"></em>
+                    حالت شناور
                   </button>
 
                   <p></p>
-                  <button class="btn btn-sm btn-danger" OnClick="ng.resetGraph()"><em class="fa fa-sync"></em> Reset Graph</button>
+                  <button style="font-family: 'IRANSansMobile'" class="btn btn-sm btn-danger" OnClick="ng.resetGraph()"><em class="fa fa-sync"></em>ریست کردن</button>
                 </div>
               </div>
 
               <div class="card border-primary mb-3">
                 <div class="card-header">
-                  <strong class="text-primary">
-                    Paths
+                  <strong style="font-family: 'IRANSansMobile'" class="text-primary">
+                    مسیرها
                     &nbsp;&nbsp;
                     <em class="fa fa-toggle-on toggle-button"  id="paths-on"  OnClick="toggleMenu('paths', 'on')"></em>
                     <em class="fa fa-toggle-off toggle-button" id="paths-off" OnClick="toggleMenu('paths', 'off')" style="display: none;"></em>
                   </strong>
                 </div>
-                <div class="card-body" id="paths">
-                  Order:
-                  <br>
-                  <button class="btn btn-sm btn-info"    OnClick="ng.order = 'lexicographical'; ng.load_paths()">Lexicographical</button>
-                  <button class="btn btn-sm btn-success" OnClick="ng.order = 'edmonds'; ng.load_paths()">Edmonds</button>
+                <div style="font-family: 'IRANSansMobile'" class="card-body" id="paths">
+                  <!--نمایش بر اساس :-->
+                  <!--<br>-->
+                  <!--<button style="font-family: 'IRANSansMobile'" class="btn btn-sm btn-info"    OnClick="ng.order = 'lexicographical'; ng.load_paths()">Lexicographical</button>-->
+                  <!--<button style="font-family: 'IRANSansMobile'" class="btn btn-sm btn-success" OnClick="ng.order = 'edmonds'; ng.load_paths()">Edmonds</button>-->
 
-                  <br>
-                  <br>
+                  <!--<br>-->
+                  <!--<br>-->
 
-                  <label>
-                    <input type="checkbox" id="stepbystep_" OnChange="$('#stepbystep').prop('checked', this.checked)"> Step by step
+                  <label style="font-family: 'IRANSansMobile'">
+                    <input type="checkbox" id="stepbystep_" OnChange="$('#stepbystep').prop('checked', this.checked)"> محاسبه قدم به قدم مسیرها
                   </label>
 
                   <p class="card-text" id="list-paths"></p>
