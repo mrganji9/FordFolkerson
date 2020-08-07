@@ -2,6 +2,8 @@ var ng = new NetworkGraph();
 var network;
 var currentMousePos = { x: -1, y: -1 };
 
+
+
 var options = {
   layout: { randomSeed: 2 }, // just to make sure the layout is the same
   locale: "en",
